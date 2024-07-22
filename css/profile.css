@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(231, 215, 194);
+}
+
+#agent-profile {
+    margin-top: 20px;
+}
+
+#agent-bio,
+#contact-info,
+#featured-listings,
+#testimonials {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agent-bio h2,
+#contact-info h2,
+#featured-listings h2,
+#testimonials h2 {
+    color: #333; /* Dark gray text color for section headings */
+}
+
+
+.agent-card{ 
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #333; 
+    display: flex; 
+ } 
+
+.agent-card img{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 150px;
+}

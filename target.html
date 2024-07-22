@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+cd    <title>Page 1</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const searchWord = localStorage.getItem('searchWord');
+            if (searchWord) {
+                const bodyText = document.body.innerHTML;
+                const regex = new RegExp(`(${searchWord})`, 'gi');
+                const highlightedText = bodyText.replace(regex, '<span class="highlight">$1</span>');
+                document.body.innerHTML = highlightedText;
+
+                const highlights = document.querySelectorAll('.highlight');
+                if (highlights.length > 0) {
+                    highlights[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                // Hide all other content
+                document.querySelectorAll('body *').forEach(element => {
+                    if (!element.classList.contains('highlight')) {
+                        element.classList.show('hidden');
+                    }
+                });
+
+                // Remove the search word from local storage
+                localStorage.removeItem('searchWord');
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id="targetElement">This is the target element on Page 1 containing the word search.</h1>
+    <p>This page contains additional content that may or may not include the word you are searching for.</p>
+
+
+    <!-- input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">Search</button> -->
+
+<section class="packages" id="packages">
+    <h1 class="heading">
+        <span>o</span>
+        <span>u</span>
+        <span>r</span>
+        <span class="space"></span>
+        <span>b</span>
+        <span>e</span>
+        <span>s</span>
+        <span>t</span>
+        <span class="space"></span>
+        <span>t</span>
+        <span>o</span>
+        <span>u</span>
+        <span>r</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+<div class="div1">
+        <div class="box">
+            <img src="images/lekki cc.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> LCC</h3>
+                <p>Lekki conservation center gives the vibes of Tours and nature</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00<span>$120.00</span></div>
+                <a href="/index2.html" class="btn">book now</a>
+            </div>
+        </div>
+    </div>
+    
+<div class="div2">
+    <div class="box">
+        <img src="images/olim.jpg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Olumo Rock</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum facilis!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+
+            <div class="price"> $90.00<span>$120.00</span></div>
+            <a href="#" class="btn">book now</a>
+        </div>
+    </div>
+</div>
+
+<div class="div3">
+<div class="box">
+    <img src="images/ijesha.jpg" alt="">
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Erin Ijesha Waterfall</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum facilis!</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+
+        <div class="price"> $90.00<span>$120.00</span></div>
+        <a href="#" class="btn">book now</a>
+    </div>
+</div>
+
+<div class="div4">
+<div class="box">
+    <img src="images/nike.jpg" alt="">
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Nike Art Gallery</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum park</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+
+        <div class="price"> $90.00<span>$120.00</span></div>
+        <a href="#" class="btn">book now</a>
+    </div>
+</div>
+</div>
+
+
+<div class="div5">
+<div class="box">
+    <img src="images/abuja.jpg" alt="">
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Millenium Park</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum facilis!</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+
+        <div class="price"> $90.00<span>$120.00</span></div>
+        <a href="#" class="btn">book now</a>
+    </div>
+</div>
+</div>
+
+
+<div class="div6"></div>
+<div class="box">
+    <img src="images/zuma rock.jpg " alt="">
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Zuma Rock</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum facilis!</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+
+        <div class="price"> $90.00<span>$120.00</span></div>
+        <a href="#" class="btn">book now</a>
+    </div>
+</div>
+</div>
+<a href="packages.html" class="bts">SEE MORE</a><ion-icon name="play" aria-hidden="true"></ion-icon>
+
+</section>
+</body>
+</html>
